@@ -52,7 +52,7 @@ private:
   static const uint8_t PROTOCOL_COMMAND_VALUE = 0xA0;    // Command send sensor data (lowest 4 bits are sensor)
   static const uint8_t SENSORMAX = 10; // Max number of sensors
   
-  uint8_t state;                    // state machine state for iBUS protocol
+  State state;                    // state machine state for iBUS protocol
   HardwareSerial* stream;           // serial port
   uint32_t last;                    // milis() of prior message
   uint8_t buffer[PROTOCOL_LENGTH];  // message buffer
